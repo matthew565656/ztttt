@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تواصل معنا - ZT Store خدمة عملاء على مدار الساعة">
+
+    <title>تواصل معنا - ZT Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- ===== الهيدر ===== -->
+    <header class="header">
+        <div class="header-top">
+            🚚 توصيل لجميع المحافظات | 💳 الدفع عند الاستلام | ✓ منتجات أصلية 100%
+        </div>
+
+        <div class="header-main">
+            <div class="container header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text"><span>ZT</span> Store</span>
+                </a>
+
+                <form class="search-bar">
+                    <input type="text" placeholder="ابحث عن قطع PC...">
+                    <button type="submit">🔍</button>
+                </form>
+
+                <div class="header-icons">
+                    <a href="cart.html" class="header-icon">
+                        🛒
+                        <span class="badge cart-badge">0</span>
+                    </a>
+                    <button class="menu-toggle">☰</button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="shop.html" class="nav-link">المتجر</a></li>
+                    <li><a href="categories.html" class="nav-link">التصنيفات</a></li>
+                    <li><a href="about.html" class="nav-link">من نحن</a></li>
+                    <li><a href="contact.html" class="nav-link active">تواصل معنا</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== عنوان الصفحة ===== -->
+    <div class="page-header">
+        <div class="container">
+            <h1>تواصل معنا</h1>
+            <p>نحن هنا لمساعدتك في أي استفسار</p>
+            <div class="breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <span>/</span>
+                <span>تواصل معنا</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== المحتوى ===== -->
+    <section class="content-page">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- معلومات الاتصال -->
+                <div class="contact-info">
+                    <h2>معلومات الاتصال</h2>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>العنوان</h4>
+                            <p>بغداد، العراق</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>الهاتف</h4>
+                            <p dir="ltr" style="text-align: right;">07XX XXX XXXX</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>البريد الإلكتروني</h4>
+                            <p>info@ztstore.iq</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div class="contact-details">
+                            <h4>ساعات العمل</h4>
+                            <p>السبت - الخميس: 9 صباحاً - 10 مساءً</p>
+                            <p>الجمعة: 2 ظهراً - 10 مساءً</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <h4 style="margin-bottom: 16px;">تابعنا على</h4>
+                        <div class="footer-social">
+                            <a href="#" class="social-link">📘</a>
+                            <a href="#" class="social-link">📸</a>
+                            <a href="#" class="social-link">📱</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- نموذج الاتصال -->
+                <div class="contact-form">
+                    <h2>أرسل رسالة</h2>
+
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name">الاسم الكامل *</label>
+                            <input type="text" id="contact-name" name="name" required placeholder="أدخل اسمك">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email">البريد الإلكتروني *</label>
+                            <input type="email" id="contact-email" name="email" required
+                                placeholder="example@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-phone">رقم الهاتف</label>
+                            <input type="tel" id="contact-phone" name="phone" placeholder="07XX XXX XXXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-subject">الموضوع *</label>
+                            <select id="contact-subject" name="subject" required>
+                                <option value="">اختر الموضوع</option>
+                                <option value="order">استفسار عن طلب</option>
+                                <option value="product">استفسار عن منتج</option>
+                                <option value="shipping">استفسار عن التوصيل</option>
+                                <option value="return">إرجاع أو استبدال</option>
+                                <option value="complaint">شكوى</option>
+                                <option value="other">أخرى</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">الرسالة *</label>
+                            <textarea id="contact-message" name="message" required placeholder="اكتب رسالتك هنا..."
+                                style="min-height: 150px;"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                            إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== الفوتر ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-text"><span>ZT</span> Store</span>
+                    </a>
+                    <p>متجرك الإلكتروني الأول للمنتجات الأصلية بأفضل الأسعار.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">📱</a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>التصنيفات</h4>
+                    <ul>
+                        <li><a href="shop.html?category=processors">المعالجات</a></li>
+                        <li><a href="shop.html?category=graphics-cards">كروت الشاشة</a></li>
+                        <li><a href="shop.html?category=motherboards">اللوحات الأم</a></li>
+                        <li><a href="shop.html?category=ram">الرامات</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>خدمة العملاء</h4>
+                    <ul>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="#">سياسة الإرجاع</a></li>
+                        <li><a href="#">الضمان</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>تواصل معنا</h4>
+                    <ul>
+                        <li>📍 بغداد، العراق</li>
+                        <li>📞 07XX XXX XXXX</li>
+                        <li>✉️ info@ztstore.iq</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2024 <a href="index.html">ZT Store</a>. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', initContactForm);
+    </script>
+</body>
+
+</html>

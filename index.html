@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="ZT Store - متجرك الأول لقطع الكمبيوتر الأصلية في العراق. معالجات، كروت شاشة، لوحات أم، رامات، وأكثر.">
+    <meta name="keywords" content="قطع كمبيوتر, PC parts, كرت شاشة, معالج, رامات, ZT Store, العراق">
+
+    <title>ZT Store - متجر قطع الكمبيوتر</title>
+
+    <!-- الخط العربي Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- التنسيقات -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- ===== الهيدر ===== -->
+    <header class="header">
+        <!-- شريط الإعلان العلوي -->
+        <div class="header-top">
+            🚚 توصيل لجميع المحافظات | 💳 الدفع عند الاستلام | ✓ منتجات أصلية 100%
+        </div>
+
+        <!-- الهيدر الرئيسي -->
+        <div class="header-main">
+            <div class="container header-content">
+                <!-- الشعار -->
+                <a href="index.html" class="logo">
+                    <span class="logo-text"><span>ZT</span> Store</span>
+                </a>
+
+                <!-- شريط البحث -->
+                <form class="search-bar">
+                    <input type="text" placeholder="ابحث عن قطع PC... (RTX 4090, Ryzen 9, ...)">
+                    <button type="submit">🔍</button>
+                </form>
+
+                <!-- أيقونات التنقل -->
+                <div class="header-icons">
+                    <a href="cart.html" class="header-icon">
+                        🛒
+                        <span class="badge cart-badge">0</span>
+                    </a>
+                    <button class="menu-toggle">☰</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- قائمة التنقل -->
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">الرئيسية</a></li>
+                    <li><a href="shop.html" class="nav-link">المتجر</a></li>
+                    <li><a href="categories.html" class="nav-link">التصنيفات</a></li>
+                    <li><a href="about.html" class="nav-link">من نحن</a></li>
+                    <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== قسم الهيرو ===== -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>
+                    جهز جهازك
+                    <span>بأفضل القطع الأصلية</span>
+                </h1>
+                <p>
+                    أحدث المعالجات وكروت الشاشة واللوحات الأم والرامات مع ضمان الجودة والتوصيل السريع لجميع المحافظات
+                    العراقية
+                </p>
+                <div class="hero-buttons">
+                    <a href="shop.html" class="btn btn-primary btn-lg">تسوق الآن</a>
+                    <a href="categories.html" class="btn btn-secondary btn-lg">تصفح التصنيفات</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://cdn.discordapp.com/attachments/1427323350769860668/1456684777452208262/509000l.png?ex=695942ea&is=6957f16a&hm=df7a85028024f025d53e22b942362eefa442953633fb997e5335e766de497937&"
+                    alt="قطع كمبيوتر">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== المميزات ===== -->
+    <section class="features section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🚚</div>
+                    <div class="feature-content">
+                        <h4>توصيل سريع</h4>
+                        <p>لجميع المحافظات</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-content">
+                        <h4>منتجات أصلية</h4>
+                        <p>ضمان المصنع</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💳</div>
+                    <div class="feature-content">
+                        <h4>دفع عند الاستلام</h4>
+                        <p>بدون مخاطر</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <div class="feature-content">
+                        <h4>ضمان شامل</h4>
+                        <p>على جميع القطع</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== التصنيفات الرئيسية ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>تسوق حسب <span>التصنيف</span></h2>
+                <p>اختر من مجموعة واسعة من قطع الكمبيوتر</p>
+            </div>
+            <div class="categories-grid" id="home-categories"></div>
+        </div>
+    </section>
+
+    <!-- ===== المنتجات المميزة ===== -->
+    <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2>المنتجات <span>المميزة</span></h2>
+                <p>أفضل القطع بأعلى تقييمات العملاء</p>
+            </div>
+            <div class="products-grid" id="featured-products"></div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="shop.html" class="btn btn-primary btn-lg">عرض جميع المنتجات</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== العلامات التجارية ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>العلامات <span>التجارية</span></h2>
+                <p>نتعامل مع أفضل العلامات التجارية العالمية</p>
+            </div>
+            <div
+                style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; align-items: center; opacity: 0.7;">
+                <span style="font-size: 2rem; font-weight: 700;">NVIDIA</span>
+                <span style="font-size: 2rem; font-weight: 700; color: #ed1c24;">AMD</span>
+                <span style="font-size: 2rem; font-weight: 700; color: #0071c5;">Intel</span>
+                <span style="font-size: 2rem; font-weight: 700;">ASUS</span>
+                <span style="font-size: 2rem; font-weight: 700;">MSI</span>
+                <span style="font-size: 2rem; font-weight: 700;">Corsair</span>
+                <span style="font-size: 2rem; font-weight: 700;">G.Skill</span>
+                <span style="font-size: 2rem; font-weight: 700;">Samsung</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== أحدث المنتجات ===== -->
+    <section class="section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2>أحدث <span>الوصولات</span></h2>
+                <p>أحدث ما وصلنا من قطع الكمبيوتر</p>
+            </div>
+            <div class="products-grid" id="latest-products"></div>
+        </div>
+    </section>
+
+    <!-- ===== الفوتر ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-text"><span>ZT</span> Store</span>
+                    </a>
+                    <p>متجرك الأول لقطع الكمبيوتر الأصلية في العراق. نوفر أحدث المعالجات وكروت الشاشة والمزيد بأسعار
+                        تنافسية.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">📱</a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>التصنيفات</h4>
+                    <ul>
+                        <li><a href="shop.html?category=processors">المعالجات</a></li>
+                        <li><a href="shop.html?category=graphics-cards">كروت الشاشة</a></li>
+                        <li><a href="shop.html?category=motherboards">اللوحات الأم</a></li>
+                        <li><a href="shop.html?category=ram">الرامات</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>خدمة العملاء</h4>
+                    <ul>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="#">سياسة الإرجاع</a></li>
+                        <li><a href="#">الضمان</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>تواصل معنا</h4>
+                    <ul>
+                        <li>📍 بغداد، العراق</li>
+                        <li>📞 07XX XXX XXXX</li>
+                        <li>✉️ info@ztstore.iq</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2024 <a href="index.html">ZT Store</a>. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- السكربتات -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        // تهيئة الصفحة الرئيسية
+        document.addEventListener('DOMContentLoaded', function () {
+            // عرض التصنيفات
+            displayCategories('home-categories');
+
+            // عرض المنتجات المميزة
+            const featuredProducts = getFeaturedProducts(8);
+            displayProducts(featuredProducts, 'featured-products');
+
+            // عرض أحدث المنتجات
+            const latestProducts = getLatestProducts(8);
+            displayProducts(latestProducts, 'latest-products');
+        });
+    </script>
+</body>
+
+</html>

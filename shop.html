@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="تصفح جميع قطع الكمبيوتر في ZT Store. معالجات، كروت شاشة، لوحات أم، رامات، والمزيد.">
+
+    <title>المتجر - ZT Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- ===== الهيدر ===== -->
+    <header class="header">
+        <div class="header-top">
+            🚚 توصيل لجميع المحافظات | 💳 الدفع عند الاستلام | ✓ منتجات أصلية 100%
+        </div>
+
+        <div class="header-main">
+            <div class="container header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text"><span>ZT</span> Store</span>
+                </a>
+
+                <form class="search-bar shop-search">
+                    <input type="text" placeholder="ابحث عن قطع PC...">
+                    <button type="submit">🔍</button>
+                </form>
+
+                <div class="header-icons">
+                    <a href="cart.html" class="header-icon">
+                        🛒
+                        <span class="badge cart-badge">0</span>
+                    </a>
+                    <button class="menu-toggle">☰</button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="shop.html" class="nav-link active">المتجر</a></li>
+                    <li><a href="categories.html" class="nav-link">التصنيفات</a></li>
+                    <li><a href="about.html" class="nav-link">من نحن</a></li>
+                    <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== عنوان الصفحة ===== -->
+    <div class="page-header">
+        <div class="container">
+            <h1>المتجر</h1>
+            <p>تصفح جميع قطع الكمبيوتر</p>
+            <div class="breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <span>/</span>
+                <span>المتجر</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== شريط التصنيفات السريع ===== -->
+    <div class="category-tabs-wrapper">
+        <div class="container">
+            <div class="category-tabs" id="category-tabs">
+                <a href="shop.html" class="category-tab active" data-category="">
+                    <span class="tab-icon">🏠</span>
+                    <span class="tab-name">الكل</span>
+                </a>
+                <a href="shop.html?category=processors" class="category-tab" data-category="processors">
+                    <span class="tab-icon">🔲</span>
+                    <span class="tab-name">المعالجات</span>
+                </a>
+                <a href="shop.html?category=graphics-cards" class="category-tab" data-category="graphics-cards">
+                    <span class="tab-icon">🎮</span>
+                    <span class="tab-name">كروت الشاشة</span>
+                </a>
+                <a href="shop.html?category=motherboards" class="category-tab" data-category="motherboards">
+                    <span class="tab-icon">🖥️</span>
+                    <span class="tab-name">اللوحات الأم</span>
+                </a>
+                <a href="shop.html?category=ram" class="category-tab" data-category="ram">
+                    <span class="tab-icon">💾</span>
+                    <span class="tab-name">الرامات</span>
+                </a>
+                <a href="shop.html?category=storage" class="category-tab" data-category="storage">
+                    <span class="tab-icon">💿</span>
+                    <span class="tab-name">التخزين</span>
+                </a>
+                <a href="shop.html?category=cooling" class="category-tab" data-category="cooling">
+                    <span class="tab-icon">❄️</span>
+                    <span class="tab-name">التبريد</span>
+                </a>
+                <a href="shop.html?category=psu" class="category-tab" data-category="psu">
+                    <span class="tab-icon">⚡</span>
+                    <span class="tab-name">الطاقة</span>
+                </a>
+                <a href="shop.html?category=cases" class="category-tab" data-category="cases">
+                    <span class="tab-icon">🗄️</span>
+                    <span class="tab-name">الكيسات</span>
+                </a>
+                <a href="shop.html?category=accessories" class="category-tab" data-category="accessories">
+                    <span class="tab-icon">🎧</span>
+                    <span class="tab-name">إكسسوارات</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== محتوى المتجر ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="shop-layout">
+                <!-- الفلاتر الجانبية -->
+                <aside class="shop-sidebar">
+                    <!-- فلتر التصنيفات -->
+                    <div class="filter-section">
+                        <h3>التصنيفات</h3>
+                        <div class="filter-options filter-category">
+                            <div class="filter-option">
+                                <input type="radio" name="category" id="cat-all" value="" checked>
+                                <label for="cat-all">جميع التصنيفات</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" name="category" id="cat-processors" value="processors">
+                                <label for="cat-processors">🔲 المعالجات</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" name="category" id="cat-graphics" value="graphics-cards">
+                                <label for="cat-graphics">🎮 كروت الشاشة</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" name="category" id="cat-motherboards" value="motherboards">
+                                <label for="cat-motherboards">🖥️ اللوحات الأم</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" name="category" id="cat-ram" value="ram">
+                                <label for="cat-ram">💾 الرامات</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" name="category" id="cat-storage" value="storage">
+                                <label for="cat-storage">💿 التخزين</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" name="category" id="cat-cooling" value="cooling">
+                                <label for="cat-cooling">❄️ التبريد</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" name="category" id="cat-psu" value="psu">
+                                <label for="cat-psu">⚡ مزودات الطاقة</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" name="category" id="cat-cases" value="cases">
+                                <label for="cat-cases">🗄️ الكيسات</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" name="category" id="cat-accessories" value="accessories">
+                                <label for="cat-accessories">🎧 الإكسسوارات</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- فلتر السعر -->
+                    <div class="filter-section">
+                        <h3>نطاق السعر</h3>
+                        <div class="price-range">
+                            <input type="number" id="min-price" placeholder="من" min="0">
+                            <span>-</span>
+                            <input type="number" id="max-price" placeholder="إلى" min="0">
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">* الأسعار بالآلاف</p>
+                    </div>
+
+                    <!-- روابط سريعة -->
+                    <div class="filter-section">
+                        <h3>روابط سريعة</h3>
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <a href="shop.html?subcategory=processors-amd"
+                                style="color: var(--text-secondary); padding: 8px; background: var(--bg-tertiary); border-radius: var(--radius-sm);">🔴
+                                معالجات AMD</a>
+                            <a href="shop.html?subcategory=processors-intel"
+                                style="color: var(--text-secondary); padding: 8px; background: var(--bg-tertiary); border-radius: var(--radius-sm);">🔵
+                                معالجات Intel</a>
+                            <a href="shop.html?subcategory=gpu-nvidia"
+                                style="color: var(--text-secondary); padding: 8px; background: var(--bg-tertiary); border-radius: var(--radius-sm);">💚
+                                كروت NVIDIA</a>
+                            <a href="shop.html?subcategory=gpu-amd"
+                                style="color: var(--text-secondary); padding: 8px; background: var(--bg-tertiary); border-radius: var(--radius-sm);">❤️
+                                كروت AMD</a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- قائمة المنتجات -->
+                <div class="shop-main">
+                    <!-- شريط الترتيب -->
+                    <div class="shop-toolbar"
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding: 16px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                        <span class="results-count" style="color: var(--text-secondary);">0 منتج</span>
+                        <div class="sort-wrapper" style="display: flex; align-items: center; gap: 12px;">
+                            <label for="sort-select" style="color: var(--text-secondary);">ترتيب حسب:</label>
+                            <select id="sort-select"
+                                style="padding: 10px 16px; background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); color: var(--text-primary); cursor: pointer;">
+                                <option value="default">الافتراضي</option>
+                                <option value="price-low">السعر: من الأقل</option>
+                                <option value="price-high">السعر: من الأعلى</option>
+                                <option value="rating">التقييم</option>
+                                <option value="newest">الأحدث</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- شبكة المنتجات -->
+                    <div class="products-grid" id="products-grid"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== الفوتر ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-text"><span>ZT</span> Store</span>
+                    </a>
+                    <p>متجرك الأول لقطع الكمبيوتر الأصلية في العراق.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">📱</a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>التصنيفات</h4>
+                    <ul>
+                        <li><a href="shop.html?category=processors">المعالجات</a></li>
+                        <li><a href="shop.html?category=graphics-cards">كروت الشاشة</a></li>
+                        <li><a href="shop.html?category=motherboards">اللوحات الأم</a></li>
+                        <li><a href="shop.html?category=ram">الرامات</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>خدمة العملاء</h4>
+                    <ul>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="#">سياسة الإرجاع</a></li>
+                        <li><a href="#">الضمان</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>تواصل معنا</h4>
+                    <ul>
+                        <li>📍 بغداد، العراق</li>
+                        <li>📞 07XX XXX XXXX</li>
+                        <li>✉️ info@ztstore.iq</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2024 <a href="index.html">ZT Store</a>. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', initShopPage);
+    </script>
+</body>
+
+</html>

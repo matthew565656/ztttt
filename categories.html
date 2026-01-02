@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="تصفح تصنيفات قطع الكمبيوتر في ZT Store - معالجات، كروت شاشة، لوحات أم، رامات، تخزين، والمزيد">
+
+    <title>التصنيفات - ZT Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* أنماط خاصة بصفحة التصنيفات */
+        .category-card-large {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition-normal);
+            cursor: pointer;
+        }
+
+        .category-card-large:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .category-icon-large {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .category-header h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .category-header p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .category-count {
+            margin-right: auto;
+            background: var(--primary-color);
+            color: white;
+            padding: 6px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .subcategories-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+        }
+
+        .subcategory-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-md);
+            color: var(--text-secondary);
+            transition: var(--transition-fast);
+            text-decoration: none;
+        }
+
+        .subcategory-item:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .subcategory-icon {
+            font-size: 1.2rem;
+        }
+
+        .subcategory-name {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .view-all-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 16px;
+            background: transparent;
+            border: 2px dashed var(--border-color);
+            border-radius: var(--radius-md);
+            color: var(--text-muted);
+            transition: var(--transition-fast);
+            text-decoration: none;
+        }
+
+        .view-all-link:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .categories-main-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .categories-main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .subcategories-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===== الهيدر ===== -->
+    <header class="header">
+        <div class="header-top">
+            🚚 توصيل لجميع المحافظات | 💳 الدفع عند الاستلام | ✓ منتجات أصلية 100%
+        </div>
+
+        <div class="header-main">
+            <div class="container header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text"><span>ZT</span> Store</span>
+                </a>
+
+                <form class="search-bar">
+                    <input type="text" placeholder="ابحث عن قطع PC...">
+                    <button type="submit">🔍</button>
+                </form>
+
+                <div class="header-icons">
+                    <a href="cart.html" class="header-icon">
+                        🛒
+                        <span class="badge cart-badge">0</span>
+                    </a>
+                    <button class="menu-toggle">☰</button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="shop.html" class="nav-link">المتجر</a></li>
+                    <li><a href="categories.html" class="nav-link active">التصنيفات</a></li>
+                    <li><a href="about.html" class="nav-link">من نحن</a></li>
+                    <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== عنوان الصفحة ===== -->
+    <div class="page-header">
+        <div class="container">
+            <h1>تصنيفات قطع الكمبيوتر</h1>
+            <p>اختر من مجموعة واسعة من قطع الـ PC الأصلية</p>
+            <div class="breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <span>/</span>
+                <span>التصنيفات</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== محتوى التصنيفات ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="categories-main-grid" id="categories-grid"></div>
+        </div>
+    </section>
+
+    <!-- ===== الفوتر ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-text"><span>ZT</span> Store</span>
+                    </a>
+                    <p>متجرك الأول لقطع الكمبيوتر الأصلية في العراق. أحدث المعالجات وكروت الشاشة والمزيد.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">📱</a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>التصنيفات</h4>
+                    <ul>
+                        <li><a href="shop.html?category=processors">المعالجات</a></li>
+                        <li><a href="shop.html?category=graphics-cards">كروت الشاشة</a></li>
+                        <li><a href="shop.html?category=motherboards">اللوحات الأم</a></li>
+                        <li><a href="shop.html?category=ram">الرامات</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>خدمة العملاء</h4>
+                    <ul>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="#">سياسة الإرجاع</a></li>
+                        <li><a href="#">الضمان</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>تواصل معنا</h4>
+                    <ul>
+                        <li>📍 بغداد، العراق</li>
+                        <li>📞 07XX XXX XXXX</li>
+                        <li>✉️ info@ztstore.iq</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2024 <a href="index.html">ZT Store</a>. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        // عرض التصنيفات مع التصنيفات الفرعية
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.getElementById('categories-grid');
+
+            container.innerHTML = categories.map(category => {
+                let subcategoriesHTML = '';
+
+                if (category.subcategories && category.subcategories.length > 0) {
+                    subcategoriesHTML = `
+                        <div class="subcategories-list">
+                            ${category.subcategories.map(sub => `
+                                <a href="shop.html?subcategory=${sub.slug}" class="subcategory-item">
+                                    <span class="subcategory-icon">${sub.icon}</span>
+                                    <span class="subcategory-name">${sub.name}</span>
+                                </a>
+                            `).join('')}
+                            <a href="shop.html?category=${category.slug}" class="view-all-link">
+                                عرض الكل →
+                            </a>
+                        </div>
+                    `;
+                } else {
+                    subcategoriesHTML = `
+                        <a href="shop.html?category=${category.slug}" class="btn btn-primary" style="width: 100%;">
+                            تصفح المنتجات
+                        </a>
+                    `;
+                }
+
+                return `
+                    <div class="category-card-large">
+                        <div class="category-header">
+                            <div class="category-icon-large">${category.icon}</div>
+                            <div>
+                                <h3>${category.name}</h3>
+                                <p>${category.description}</p>
+                            </div>
+                            <span class="category-count">${category.count} منتج</span>
+                        </div>
+                        ${subcategoriesHTML}
+                    </div>
+                `;
+            }).join('');
+        });
+    </script>
+</body>
+
+</html>

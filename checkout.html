@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="إتمام الطلب - ZT Store">
+
+    <title>إتمام الطلب - ZT Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- ===== الهيدر ===== -->
+    <header class="header">
+        <div class="header-top">
+            🚚 توصيل لجميع المحافظات | 💳 الدفع عند الاستلام | ✓ منتجات أصلية 100%
+        </div>
+
+        <div class="header-main">
+            <div class="container header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text"><span>ZT</span> Store</span>
+                </a>
+
+                <form class="search-bar">
+                    <input type="text" placeholder="ابحث عن قطع PC...">
+                    <button type="submit">🔍</button>
+                </form>
+
+                <div class="header-icons">
+                    <a href="cart.html" class="header-icon">
+                        🛒
+                        <span class="badge cart-badge">0</span>
+                    </a>
+                    <button class="menu-toggle">☰</button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="shop.html" class="nav-link">المتجر</a></li>
+                    <li><a href="categories.html" class="nav-link">التصنيفات</a></li>
+                    <li><a href="about.html" class="nav-link">من نحن</a></li>
+                    <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== عنوان الصفحة ===== -->
+    <div class="page-header">
+        <div class="container">
+            <h1>إتمام الطلب</h1>
+            <p>أدخل بيانات التوصيل لإتمام طلبك</p>
+            <div class="breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <span>/</span>
+                <a href="cart.html">السلة</a>
+                <span>/</span>
+                <span>إتمام الطلب</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== محتوى الدفع ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="checkout-layout">
+                <!-- نموذج البيانات -->
+                <div class="checkout-form">
+                    <form id="checkout-form">
+                        <h2>بيانات التوصيل</h2>
+
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل *</label>
+                            <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكامل">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="07XX XXX XXXX"
+                                pattern="07[3-9][0-9]{8}">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="province">المحافظة *</label>
+                            <select id="province" name="province" required>
+                                <option value="">اختر المحافظة</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">العنوان التفصيلي *</label>
+                            <textarea id="address" name="address" required
+                                placeholder="المنطقة، الحي، أقرب نقطة دالة..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">ملاحظات إضافية (اختياري)</label>
+                            <textarea id="notes" name="notes" placeholder="أي تعليمات خاصة للتوصيل..."></textarea>
+                        </div>
+
+                        <!-- طريقة الدفع -->
+                        <div class="payment-methods">
+                            <h2>طريقة الدفع</h2>
+
+                            <label class="payment-method selected">
+                                <input type="radio" name="payment" value="cod" checked>
+                                <div class="payment-method-icon">💵</div>
+                                <div class="payment-method-info">
+                                    <h4>الدفع عند الاستلام</h4>
+                                    <p>ادفع نقداً عند استلام طلبك</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 30px;">
+                            تأكيد الطلب
+                        </button>
+                    </form>
+                </div>
+
+                <!-- ملخص الطلب -->
+                <div class="order-summary">
+                    <h3>ملخص طلبك</h3>
+                    <div class="order-items"></div>
+                    <div class="order-totals" style="margin-top: 20px;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== الفوتر ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-text"><span>ZT</span> Store</span>
+                    </a>
+                    <p>متجرك الإلكتروني الأول للمنتجات الأصلية بأفضل الأسعار.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">📱</a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>التصنيفات</h4>
+                    <ul>
+                        <li><a href="shop.html?category=processors">المعالجات</a></li>
+                        <li><a href="shop.html?category=graphics-cards">كروت الشاشة</a></li>
+                        <li><a href="shop.html?category=motherboards">اللوحات الأم</a></li>
+                        <li><a href="shop.html?category=ram">الرامات</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>خدمة العملاء</h4>
+                    <ul>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="#">سياسة الإرجاع</a></li>
+                        <li><a href="#">الضمان</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>تواصل معنا</h4>
+                    <ul>
+                        <li>📍 بغداد، العراق</li>
+                        <li>📞 07XX XXX XXXX</li>
+                        <li>✉️ info@ztstore.iq</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2024 <a href="index.html">ZT Store</a>. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', initCheckoutPage);
+    </script>
+</body>
+
+</html>
